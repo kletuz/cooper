@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gender</th>
+      <th>B year</th>
+      <th>C status</th>
+      <th>Email</th>
+      <th>Cfc 1</th>
+      <th>Cfc 2</th>
+      <th>Cfc 3</th>
+      <th>Cfc 4</th>
+      <th>Cfc 5</th>
+      <th>Cfc 6</th>
+      <th>Cfc 7</th>
+      <th>Cfc 8</th>
+      <th>Cfc 9</th>
+      <th>Cfc 10</th>
+      <th>Cfc 11</th>
+      <th>Cfc 12</th>
+      <th>Cfc 13</th>
+      <th>Cfc 14</th>
+      <th>Svo 1</th>
+      <th>Svo 2</th>
+      <th>Svo 3</th>
+      <th>Svo 4</th>
+      <th>Svo 5</th>
+      <th>Svo 6</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stats.each do |stat| %>
+      <tr>
+        <td><%= stat.gender %></td>
+        <td><%= stat.b_year %></td>
+        <td><%= stat.c_status %></td>
+        <td><%= stat.email %></td>
+        <td><%= stat.cfc_1 %></td>
+        <td><%= stat.cfc_2 %></td>
+        <td><%= stat.cfc_3 %></td>
+        <td><%= stat.cfc_4 %></td>
+        <td><%= stat.cfc_5 %></td>
+        <td><%= stat.cfc_6 %></td>
+        <td><%= stat.cfc_7 %></td>
+        <td><%= stat.cfc_8 %></td>
+        <td><%= stat.cfc_9 %></td>
+        <td><%= stat.cfc_10 %></td>
+        <td><%= stat.cfc_11 %></td>
+        <td><%= stat.cfc_12 %></td>
+        <td><%= stat.cfc_13 %></td>
+        <td><%= stat.cfc_14 %></td>
+        <td><%= stat.svo_1 %></td>
+        <td><%= stat.svo_2 %></td>
+        <td><%= stat.svo_3 %></td>
+        <td><%= stat.svo_4 %></td>
+        <td><%= stat.svo_5 %></td>
+        <td><%= stat.svo_6 %></td>
+        <td><%= link_to 'Show', stat %></td>
+        <td><%= link_to 'Edit', edit_stat_path(stat) %></td>
+        <td><%= link_to 'Destroy', stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stat', stats_path, method: :post %>

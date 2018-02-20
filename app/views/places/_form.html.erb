@@ -1,0 +1,37 @@
+<% provide(:title, 'Agregar Habitats') %>
+<h1>Registrar Hábitats</h1>
+
+<%= form_for(place) do |f| %>
+  <% if place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@place) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :Nombre %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :Antiguedad %>
+      <%= f.text_field :age, class: 'form-control' %>
+
+      <%= f.label :Cantidad_de_departamentos %>
+      <%= f.text_field :population, class: 'form-control' %>
+
+      <%= f.submit "Agregar hábitat", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+
+</div>
+<% end %>

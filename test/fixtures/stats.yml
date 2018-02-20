@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gender: 1
+  b_year: 1
+  c_status: 1
+  email: MyString
+  cfc_1: 1
+  cfc_2: 1
+  cfc_3: 1
+  cfc_4: 1
+  cfc_5: 1
+  cfc_6: 1
+  cfc_7: 1
+  cfc_8: 1
+  cfc_9: 1
+  cfc_10: 1
+  cfc_11: 1
+  cfc_12: 1
+  cfc_13: 1
+  cfc_14: 1
+  svo_1: 1
+  svo_2: 1
+  svo_3: 1
+  svo_4: 1
+  svo_5: 1
+  svo_6: 1
+
+two:
+  gender: 1
+  b_year: 1
+  c_status: 1
+  email: MyString
+  cfc_1: 1
+  cfc_2: 1
+  cfc_3: 1
+  cfc_4: 1
+  cfc_5: 1
+  cfc_6: 1
+  cfc_7: 1
+  cfc_8: 1
+  cfc_9: 1
+  cfc_10: 1
+  cfc_11: 1
+  cfc_12: 1
+  cfc_13: 1
+  cfc_14: 1
+  svo_1: 1
+  svo_2: 1
+  svo_3: 1
+  svo_4: 1
+  svo_5: 1
+  svo_6: 1

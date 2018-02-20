@@ -1,0 +1,11 @@
+<li>
+
+  <%= link_to place.name, place %> <!--otra corrección sutil e indispensable de la ruta-->
+
+  <% if current_user.admin? && !current_user?(user) %>
+  | <%= link_to "edit",  edit_place_path(place.id) %>
+  | <%= link_to "delete", place, method: :delete, data: { confirm: "¿Seguro, carnal?" } %>
+
+  <% end %>
+
+</li>

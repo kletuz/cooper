@@ -1,0 +1,139 @@
+<h1>Stat wizard</h1>
+<h2>Step: Basic info</h2>
+<%= form_for stat_step_model, :url => current_step_path, :as => :stat do |f| %>
+  <%# TODO limit to fields of this particular step %>
+    <% if @stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stat.errors.count, "error") %> prohibited this stat from being saved:</h2>
+
+      <ul>
+      <% @stat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.number_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= f.label :b_year %>
+    <%= f.number_field :b_year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :c_status %>
+    <%= f.number_field :c_status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <!-- <div class="field">
+    <%= f.label :cfc_1 %>
+    <%= f.number_field :cfc_1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_2 %>
+    <%= f.number_field :cfc_2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_3 %>
+    <%= f.number_field :cfc_3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_4 %>
+    <%= f.number_field :cfc_4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_5 %>
+    <%= f.number_field :cfc_5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_6 %>
+    <%= f.number_field :cfc_6 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_7 %>
+    <%= f.number_field :cfc_7 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_8 %>
+    <%= f.number_field :cfc_8 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_9 %>
+    <%= f.number_field :cfc_9 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_10 %>
+    <%= f.number_field :cfc_10 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_11 %>
+    <%= f.number_field :cfc_11 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_12 %>
+    <%= f.number_field :cfc_12 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_13 %>
+    <%= f.number_field :cfc_13 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cfc_14 %>
+    <%= f.number_field :cfc_14 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :svo_1 %>
+    <%= f.number_field :svo_1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :svo_2 %>
+    <%= f.number_field :svo_2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :svo_3 %>
+    <%= f.number_field :svo_3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :svo_4 %>
+    <%= f.number_field :svo_4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :svo_5 %>
+    <%= f.number_field :svo_5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :svo_6 %>
+    <%= f.number_field :svo_6 %>
+  </div> -->
+
+
+  <%= render 'step_navigation', f: f %>
+<% end %>

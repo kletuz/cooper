@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for([@place, @user]) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :departamento %>
+      <%= f.text_field :depto, class: 'form-control' %>
+
+      <%= f.label :condominio %>
+      <%= f.text_field :condo, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Crear participante", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

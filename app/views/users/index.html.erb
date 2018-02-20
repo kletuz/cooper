@@ -1,0 +1,15 @@
+<!-- Esta vista no opera más, la buena es la que incluye places -->
+
+<% provide(:title, 'Todos los participantes') %>
+<h1>Participantes</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+    <%= render @users %>
+    <br>
+    <%= link_to "Agregar", new_place_user_path, class: "btn btn-primary" %>
+</ul>
+
+
+<%= will_paginate %>

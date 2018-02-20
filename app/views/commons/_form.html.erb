@@ -1,0 +1,29 @@
+<%= form_for([place, common]) do |f| %>
+  <% if common.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(common.errors.count, "error") %> prohibited this common from being saved:</h2>
+
+      <ul>
+      <% common.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for([place, common]) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <%= f.label :acumulado %>
+        <%= f.text_field :plus, class: 'form-control' %>
+
+        <%= f.label :saldo %>
+        <%= f.text_field :balance, class: 'form-control' %>
+
+        <%= f.submit "Iniciar juego", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

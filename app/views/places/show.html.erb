@@ -1,0 +1,31 @@
+<% provide(:title, @place.name) %>
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @place.name %>
+        <%= "   " %>
+        <%= @place.age %>
+        <%= "   " %>
+        <%= @place.population %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<div class="col-md-8">    <!--agrgado para mejorar-->
+   <% if @place.users.any? %>
+     <h3>Users (<%= @place.users.count %>)</h3>
+     <ol class="microposts">
+       <%= render @users %>
+     </ol>
+     <%= will_paginate @users %>
+   <% end %>
+ </div>
+
+
+<%= link_to "Agregar usuarios", new_place_user_path(@place), class: "btn btn-primary" %>
+
+<%= link_to "iniciar ronda", new_place_common_path(@place), class: "btn btn-primary" %>
